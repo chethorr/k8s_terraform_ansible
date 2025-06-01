@@ -3,16 +3,16 @@
   hosts: master
   become: yes
   roles:
-    - kubernetes_master
+    - master
 
 - name: Configure Kubernetes Network
   hosts: master
   become: yes
   roles:
-    - kubernetes_network
+    - network
 
 - name: Configure Kubernetes Worker
   hosts: worker
   become: yes
   roles:
-    - kubernetes_worker
+    - worker

@@ -4,3 +4,4 @@ variable "subnet_id" {}
 variable "key_pair" {}
 variable "ec2_name" {}
 variable "ebs_volume_id" {}
+variable "vpc_sg_id" {}

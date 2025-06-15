@@ -10,10 +10,15 @@ resource "aws_instance" "nfs_ec2_mod" {
    tags = {
     "name" = "${var.ec2_name} + nfs-block"
   }
-}
 
-resource "aws_volume_attachment" "ebs_volume_attachment" {
-  instance_id = aws_instance.nfs_ec2_mod.id
-  volume_id = var.ebs_volume_id
-  device_name = "/dev/sde"
+  ebs_block_device {
+    device_name           = var.ebs_device_name # e.g., /dev/sdh or /dev/xvdb
+    volume_size           = var.ebs_volume_size_gb
+    volume_type           = "gp3"
+    delete_on_termination = var.ebs_delete_on_termination # Control lifecycle
+    encrypted             = true
+    tags = {
+      Name = "${var.ec2_name}-data-volume"
+    }
+  }
 }

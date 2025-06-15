@@ -9,3 +9,15 @@ output "subnet_qa_id" {
 output "subnet_qa_cidr" {
   value = module.subnet.subnet_mod_cidr
 }
+
+output "ec2_ansible_ip" {
+  value = module.ansible.ansible_ec2_ip
+}
+
+output "ec2_nfs_ip" {
+  value = module.nfs.nfs_ec2_ip
+}
+
+output "ec2_cluster_nodes_ip" {
+  value = local.ec2_cluster_ip
+}

@@ -7,3 +7,4 @@ variable "vpc_sg_id" {}
 variable "ebs_device_name" {}
 variable "ebs_delete_on_termination" {}
 variable "ebs_volume_size_gb" {}
+variable "aws_private_key_path" {}

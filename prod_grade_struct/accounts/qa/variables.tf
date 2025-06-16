@@ -60,3 +60,7 @@ variable "cluster_name" {
 variable "ebs_delete" {}
 variable "ebs_dev_name" {}
 variable "ebs_vol_size" {}
+
+
+######## PKEY  ##########
+variable "aws_private_key_path" {}

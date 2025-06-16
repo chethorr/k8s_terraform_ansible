@@ -18,6 +18,15 @@ output "ec2_nfs_ip" {
   value = module.nfs.nfs_ec2_ip
 }
 
-output "ec2_cluster_nodes_ip" {
-  value = local.ec2_cluster_ip
+output "master_ec2_cluster_nodes_ip" {
+  value = module.cluster.master_cluster_ec2_ip
 }
+
+output "worker1_ec2_cluster_nodes_ip" {
+  value = module.cluster.worker1_cluster_ec2_ip
+}
+
+output "worker2_ec2_cluster_nodes_ip" {
+  value = module.cluster.worker2_cluster_ec2_ip
+}
+
